@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de Formulário</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="screen">
+        <div class="leftside">
+            <img src="images/financial_data.png" alt="" />
+        </div>
+        <div class="rightside">
+            <h1>Crie uma conta</h1>
+
+            <form method="POST" action="cadastro.php" class="b7validator">
+                <label>
+                    <span>Seu nome:<br/></span>
+                    <input type="text" name="name" data-rules="required|min=2" placeholder="Digite seu Nome"/>
+                </label>
+                <label>
+                    <span>Seu e-mail:<br/></span>
+                    <input type="text" name="email" data-rules="required|email" placeholder="Digite seu E-mail" />
+                </label>
+                <label>
+                    <span>Sua senha:<br/></span>
+                    <input type="password" name="password" data-rules="min=4" placeholder="Digite sua Senha" />
+                </label>
+                <label>
+                    <div class="wrap">
+                        <button class="button">Submit</button>
+                    </div>
+                </label>
+            </form>
+
+            <div class="msg-login">
+                Já tem uma conta? <a href="">Faça o Login</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
